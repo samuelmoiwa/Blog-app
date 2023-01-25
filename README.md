@@ -168,4 +168,4 @@ If you like this project leave a star
 
 This project is [MIT](./LICENSE) licensed.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a https://github.com/samuelmoiwa/Blog-app/blob/data_model/MIT.md> back to top </a>)</p>
