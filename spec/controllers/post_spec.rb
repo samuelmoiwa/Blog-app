@@ -10,7 +10,14 @@ RSpec.describe 'Posts', type: :request do
       expect(response).to have_http_status(:ok)
     end
   end
-	@@ -22,13 +22,13 @@
+  context 'should render template' do
+    it 'expect users/1/posts to be rendered' do
+      get '/users/1/posts'
+      expect(response).to render_template('index')
+    end
+    it 'expect users/1/posts/:id to be rendered' do
+      get '/users/1/posts/1'
+      expect(response).to render_template('show')
     end
   end
   context 'should render page contents correctly' do
