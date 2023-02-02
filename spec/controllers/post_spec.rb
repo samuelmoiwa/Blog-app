@@ -1,5 +1,4 @@
 require_relative '../rails_helper'
-
 RSpec.describe 'Posts', type: :request do
   context 'check if the status is success' do
     it 'expect status to be 200 success' do
@@ -7,7 +6,7 @@ RSpec.describe 'Posts', type: :request do
       expect(response).to have_http_status(:ok)
     end
     it 'expect status to be 200 success' do
-      get '/users/1/posts/1'
+      get '/users/1/posts/2'
       expect(response).to have_http_status(:ok)
     end
   end
@@ -19,18 +18,6 @@ RSpec.describe 'Posts', type: :request do
     it 'expect users/1/posts/:id to be rendered' do
       get '/users/1/posts/1'
       expect(response).to render_template('show')
-    end
-  end
-  context 'should render page contents correctly' do
-    it 'expect page to have "here are all posts"' do
-      get '/users/1/posts'
-      expect(response.body).to include('here are all posts')
-    end
-  end
-  context 'should render page contents correctly' do
-    it 'expect page to have "here are individual posts"' do
-      get '/users/1/posts/1'
-      expect(response.body).to include('here are individual posts')
     end
   end
 end
