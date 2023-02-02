@@ -20,5 +20,4 @@ RSpec.describe 'Users', type: :request do
       expect(response).to render_template('show')
     end
   end
-
 end
