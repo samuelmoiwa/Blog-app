@@ -1,3 +1,4 @@
+require_relative '../rails_helper'
 RSpec.describe 'Users', type: :request do
   context 'find responce check' do
     before(:example) { get '/' }
