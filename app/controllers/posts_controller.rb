@@ -21,7 +21,7 @@ class PostsController < ApplicationController
       redirect_to user_posts_path(current_user)
     else
       flash.now[:error] = 'question could not  be saved'
-      render :new, locals: post: post
+      render :new, locals: { post: post }
     end
   end
 
