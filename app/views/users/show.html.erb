@@ -12,13 +12,13 @@
     </p>
   </div>
   <% @user.three_posts.each do |post|%>
-    <div id="show_container_user_id">
-      <h3>Post #<%= post.id %></h3>
+    <div class='post' id="show_container_user_id">
+      <h3> <%= link_to "Post: #{post.id} ", "/users/#{@user.id}/posts/#{post.id}" %></h3>
       <p><%= post.text %></p>
       <h4>Comments <%= post.comments_counter %> likes: <%= post.likes_counter %></h4>
     </div>
   <% end %>
   <div id="show_container_user_button_container">
-    <button id="show_container_user_button"><%= link_to "See all posts", "/" %></button>
+    <button id="show_container_user_button"><%= link_to "See all posts", "/users/#{@user.id}/posts" %></button>
   </div>
 </div>
