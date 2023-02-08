@@ -37,4 +37,6 @@ RSpec.describe 'index page', type: :system do
       expect(page).to have_current_path("/users/#{@user.id}")
     end
   end
+  # rubocop:enable Layout/LineLength
+
 end
