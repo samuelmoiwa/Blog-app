@@ -38,5 +38,4 @@ RSpec.describe 'index page', type: :system do
     end
   end
   # rubocop:enable Layout/LineLength
-
 end
