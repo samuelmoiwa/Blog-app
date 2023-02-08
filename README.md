@@ -108,7 +108,7 @@ In order to run this project you need: Ruby installed on your pc
 👤 **Kareem Magdy Wilson**
 
 - GitHub: [@KareemWilson](https://github.com/KareemWilson)
-- Instagram: [@](https://www.instagram.com/code.afternoon/)
+- Instagram: [@code.afternoon](https://www.instagram.com/code.afternoon/)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/kareem-wilson/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
