@@ -1,5 +1,4 @@
 require 'rails_helper'
-# rubocop:disable Metrics/BlockLength
 
 RSpec.describe 'Post index page', type: :system do
   before do
@@ -7,7 +6,7 @@ RSpec.describe 'Post index page', type: :system do
 
     @user = User.create(name: 'John', photo: 'https://kiddy.com/pic/890987655', bio: 'Hi there', posts_counter: 0)
     Post.create(title: 'Hello from Mars',
-                text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', comments_counter: 0, likes_counter: 0, author_id: @user.id) 
+                text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', comments_counter: 0, likes_counter: 0, author_id: @user.id) # rubocop:disable Layout/LineLength
     @post = Post.create(title: 'Hello from Earth', text: 'The printing and typesetting industry.',
                         comments_counter: 0, likes_counter: 0, author_id: @user.id)
     @comment = Comment.create(author_id: @user.id, post_id: @post.id, text: 'Hello')
@@ -18,7 +17,7 @@ RSpec.describe 'Post index page', type: :system do
     it "should load the user's name" do
       expect(page).to have_content('John')
     end
-
+  # rubocop:enable Metrics/BlockLength
     it 'should load the number of posts by the user' do
       expect(page).to have_content('Number of posts: 2')
     end
@@ -53,5 +52,4 @@ RSpec.describe 'Post index page', type: :system do
       expect(page).to have_content('Pagination')
     end
   end
-# rubocop:enable Metrics/BlockLength
 end
