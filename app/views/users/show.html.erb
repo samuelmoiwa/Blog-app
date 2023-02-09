@@ -13,7 +13,7 @@
   </div>
   <% @user.three_posts.each do |post|%>
     <div class='post' id="show_container_user_id">
-      <h3> <%= link_to "Post: #{post.id} ", "/users/#{@user.id}/posts/#{post.id}" %></h3>
+      <h3> <%= link_to post.title, "/users/#{@user.id}/posts/#{post.id}" %></h3>
       <p><%= post.text %></p>
       <h4>Comments <%= post.comments_counter %> likes: <%= post.likes_counter %></h4>
     </div>
