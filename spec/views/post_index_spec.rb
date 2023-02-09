@@ -13,7 +13,7 @@ RSpec.describe 'Post index page', type: :system do
 
     visit user_posts_path(@user.id)
   end
-  context 'When visiting the post index page' do
+  context 'When visiting the post index page' do # rubocop:disable Metrics/BlockLength
     it "should load the user's name" do
       expect(page).to have_content('John')
     end
