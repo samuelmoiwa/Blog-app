@@ -7,7 +7,7 @@ RSpec.describe 'Post index page', type: :system do
 
     @user = User.create(name: 'John', photo: 'https://kiddy.com/pic/890987655', bio: 'Hi there', posts_counter: 0)
     Post.create(title: 'Hello from Mars',
-                text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', comments_counter: 0, likes_counter: 0, author_id: @user.id) # rubocop:disable Layout/LineLength
+                text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', comments_counter: 0, likes_counter: 0, author_id: @user.id) 
     @post = Post.create(title: 'Hello from Earth', text: 'The printing and typesetting industry.',
                         comments_counter: 0, likes_counter: 0, author_id: @user.id)
     @comment = Comment.create(author_id: @user.id, post_id: @post.id, text: 'Hello')
