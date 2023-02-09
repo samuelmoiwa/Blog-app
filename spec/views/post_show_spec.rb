@@ -31,8 +31,8 @@ RSpec.describe 'Post show page', type: :system do
     end
 
     it 'should display the comments pusblished' do
-        expect(page).to have_content('Hello')
-        expect(page).to have_content('John')
+      expect(page).to have_content('Hello')
+      expect(page).to have_content('John')
     end
     it 'Should show  the username of each commentor.' do
       expect(page).to have_content('John: Hello')

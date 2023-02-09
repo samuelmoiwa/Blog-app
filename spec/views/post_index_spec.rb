@@ -1,4 +1,5 @@
 require 'rails_helper'
+# rubocop:disable Metrics/BlockLength
 
 RSpec.describe 'Post index page', type: :system do
   before do
@@ -42,7 +43,7 @@ RSpec.describe 'Post index page', type: :system do
       visit user_posts_path(@user.id)
       expect(page).to have_xpath("//img[@src='#{@user.photo}']")
     end
-    it  'Should  Show the first comment for each post ' do
+    it 'Should  Show the first comment for each post ' do
       expect(page).to have_content(@comment.text)
     end
     it 'Should show how many likes on this post' do
@@ -52,4 +53,5 @@ RSpec.describe 'Post index page', type: :system do
       expect(page).to have_content('Pagination')
     end
   end
+# rubocop:enable Metrics/BlockLength
 end
