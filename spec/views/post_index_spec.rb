@@ -17,7 +17,7 @@ RSpec.describe 'Post index page', type: :system do
     it "should load the user's name" do
       expect(page).to have_content('John')
     end
-      # rubocop:enable Metrics/BlockLength
+    # rubocop:enable Metrics/BlockLength
     it 'should load the number of posts by the user' do
       expect(page).to have_content('Number of posts: 2')
     end
