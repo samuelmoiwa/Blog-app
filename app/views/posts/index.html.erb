@@ -8,14 +8,14 @@
     </div>
     <% @posts[0...5].each do |post|%>
     <div id="show_container_user_id">
-      <h3>Post #<%= post.id %></h3>
+      <h3>Title: <%= link_to post.title, user_post_path(@user, post) %></h3>
       <p><%= post.text %></p>
       <h4>Comments <%= post.comments_counter %> likes: <%= post.likes_counter %></h4>
       <%= form_with url: "/users/#{@user.id}/posts/#{post.id}/likes" do |f| %>
         <%= f.submit "like posts"%>
       <% end %>
     </div>
-    <% @comments=Comment.where(post_id: post.id)%>
+    <% @comments=Comment.where(post_id: post.id) %>
     <div id="container_index_posts_comments_container">
     <% @comments.each do |comment| %>
         <div id="container_index_posts_comments">
