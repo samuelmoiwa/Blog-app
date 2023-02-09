@@ -42,5 +42,14 @@ RSpec.describe 'Post index page', type: :system do
       visit user_posts_path(@user.id)
       expect(page).to have_xpath("//img[@src='#{@user.photo}']")
     end
+    it  'Should  Show the first comment for each post ' do
+      expect(page).to have_content(@comment.text)
+    end
+    it 'Should show how many likes on this post' do
+      expect(page).to have_content('likes: 0')
+    end
+    it 'Should show a section for pagination if there are more posts than fit on the view' do
+      expect(page).to have_content('Pagination')
+    end
   end
 end
