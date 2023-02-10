@@ -14,12 +14,12 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(helper_params)
-    @post.author_id = current_user.id
+    @post.author_id = params[:user_id]
     @post.comments_counter = 0
     @post.likes_counter = 0
     if @post.save
       flash[:success] = 'Added succesfully'
-      redirect_to user_posts_path(current_user)
+      redirect_to user_posts_path(params[:user_id])
     else
       flash.now[:error] = 'question could not  be saved'
       render :new, locals: { post: post }
