@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-    layout 'standard'
+  layout 'standard'
   def show
     @user = User.find(params[:id])
     @posts = Post.where(author_id: @user.id)
