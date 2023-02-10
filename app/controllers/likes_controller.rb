@@ -11,4 +11,5 @@ class LikesController < ApplicationController
       @likes.errors.full_messages.join(', ')
     end
   end
+  
 end
